@@ -321,7 +321,7 @@ export const caseStudies = {
         es: "Un aliado tecnológico continuo para la empresa.",
       },
     },
-  ] satisfies CaseStudy[],
+  ] as CaseStudy[],
 };
 
 /* ────────────────────────────── Ventures ────────────────────────────── */
