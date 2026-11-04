@@ -1,6 +1,6 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail } from "lucide-react";
 import { contact, footer, nav, site, type Locale } from "@/content";
-import { LinkedInIcon, WhatsAppIcon } from "./icons";
+import { LinkedInIcon } from "./icons";
 
 export function Footer({ locale }: { locale: Locale }) {
   return (
@@ -21,8 +21,8 @@ export function Footer({ locale }: { locale: Locale }) {
             <a href="#contact" className="hover:text-brand">{nav.cta[locale]}</a>
           </nav>
           <div className="flex items-center gap-2">
-            <a href={`https://wa.me/${contact.whatsapp.number}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid size-10 place-items-center rounded-full bg-white/80 text-ink-soft shadow-sm transition hover:text-[#25D366]">
-              <WhatsAppIcon className="size-4.5" />
+            <a href={`mailto:${contact.email}`} aria-label={contact.emailLabel[locale]} className="grid size-10 place-items-center rounded-full bg-white/80 text-ink-soft shadow-sm transition hover:text-brand">
+              <Mail className="size-4" aria-hidden="true" />
             </a>
             <a href={contact.linkedin.url} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="grid size-10 place-items-center rounded-full bg-white/80 text-ink-soft shadow-sm transition hover:text-[#0A66C2]">
               <LinkedInIcon className="size-4" />

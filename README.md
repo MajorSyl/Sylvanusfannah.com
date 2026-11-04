@@ -20,7 +20,7 @@ The site builds and runs with **no environment variables at all**:
 
 | Missing | What happens |
 | --- | --- |
-| `DATABASE_URL` **and** `RESEND_API_KEY` | Quote form shows a friendly "not connected yet, use WhatsApp/LinkedIn" message |
+| `DATABASE_URL` **and** `RESEND_API_KEY` | Quote form shows a friendly "not connected yet, use email/LinkedIn" message |
 | Only one of the two | Form still works (saves to DB, or emails you) |
 | Turnstile keys | Widget hidden, verification skipped (honeypot + rate limit still active) |
 | Auth variables | `/admin` shows a setup notice listing the missing variables |
@@ -36,7 +36,7 @@ Every string is `{ en, es }` so the language toggle works everywhere. The struct
 Common edits:
 
 - **Your photo**: save it as `public/images/sylvanus.jpg` (portrait, about 1000×1250px). Until it exists, a branded "SF" placeholder is shown. The file is detected at build time, so redeploy after adding it.
-- **Show your email**: in `contact`, set `showEmail: true` (the address is already `sylvanus@sylvanusfannah.com`).
+- **Email**: shown in `contact` (`sylvanus@sylkit.com`). There is no phone or WhatsApp on the site, only email and LinkedIn.
 - **Venture links**: fill `url` for Syl Express, Sylprint and Talu in `ventures.items` (empty = "Website coming soon").
 - **Placeholder case studies**: edit the `ai-chatbot` and `bi-dashboard` items in `caseStudies.items` and remove `placeholder: true`.
 - **Budget / timeline options**: `budgetOptions` and `timelineOptions`.
@@ -103,7 +103,7 @@ Then visit `/admin`.
 
 | Variable | Required for | Notes |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | SEO | `https://sylvanusfannah.com` (default if unset) |
+| `NEXT_PUBLIC_SITE_URL` | SEO | `https://sylvanusfannah.sylkit.com` |
 | `DATABASE_URL` | Saving quotes, admin | Neon pooled connection string |
 | `RESEND_API_KEY` | Email alerts | |
 | `QUOTE_NOTIFICATION_EMAIL` | Email alerts | Your Resend account email until the domain is verified |

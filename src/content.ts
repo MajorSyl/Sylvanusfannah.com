@@ -19,7 +19,7 @@ export const t = (value: Localized, locale: Locale) => value[locale];
 
 export const site = {
   name: "Sylvanus Fannah",
-  domain: "sylvanusfannah.com",
+  domain: "sylvanusfannah.sylkit.com",
   role: {
     en: "Full-stack developer & founder",
     es: "Desarrollador full-stack y fundador",
@@ -69,8 +69,8 @@ export const hero = {
   name: "Sylvanus Fannah",
   tagline: site.tagline,
   intro: {
-    en: "Full-stack developer and founder. I build AI automations, web and mobile apps, and business systems — delivered on time, with clear communication from kickoff to launch.",
-    es: "Desarrollador full-stack y fundador. Construyo automatizaciones con IA, apps web y móviles y sistemas de negocio — entregados a tiempo, con comunicación clara desde el inicio hasta el lanzamiento.",
+    en: "Full-stack developer and founder. I consult on and build web and mobile apps, business systems and software, plus AI automations — delivered on time, with clear communication from kickoff to launch.",
+    es: "Desarrollador full-stack y fundador. Asesoro y construyo apps web y móviles, sistemas de negocio y software, además de automatizaciones con IA — entregados a tiempo, con comunicación clara desde el inicio hasta el lanzamiento.",
   },
   /** Put your photo at /public/images/sylvanus.jpg. A placeholder is shown until it exists. */
   photo: "/images/sylvanus.jpg",
@@ -285,42 +285,41 @@ export const caseStudies = {
       },
     },
     {
-      slug: "ai-chatbot",
-      title: "AI WhatsApp Chatbot",
-      category: { en: "AI & Automation", es: "IA y automatización" },
-      platforms: ["WhatsApp", "AI"],
+      slug: "rcfs",
+      title: "Rotary Club of Freetown-Sunset",
+      category: { en: "Client · Community organization", es: "Cliente · Organización comunitaria" },
+      platforms: ["Website", "Web app", "Newsletter"],
       problem: {
-        en: "Placeholder — describe the client's support or booking bottleneck here.",
-        es: "Ejemplo — describe aquí el problema de atención o reservas del cliente.",
+        en: "A Rotary club running community projects needed one professional place to present its work and keep its members connected.",
+        es: "Un club Rotary con proyectos comunitarios necesitaba un lugar profesional para mostrar su trabajo y mantener conectados a sus miembros.",
       },
       built: {
-        en: "Placeholder — describe the AI agent and its integrations here.",
-        es: "Ejemplo — describe aquí el agente de IA y sus integraciones.",
+        en: "The club's website and web app, plus its newsletter and design work.",
+        es: "El sitio web y la aplicación web del club, además de su boletín y trabajo de diseño.",
       },
       result: {
-        en: "Placeholder — add the measurable outcome here.",
-        es: "Ejemplo — agrega aquí el resultado medible.",
+        en: "Live at rcfsunset.org.",
+        es: "En vivo en rcfsunset.org.",
       },
-      placeholder: true,
+      url: "https://rcfsunset.org",
     },
     {
-      slug: "bi-dashboard",
-      title: "Business Intelligence Dashboard",
-      category: { en: "Business Intelligence", es: "Inteligencia de negocio" },
-      platforms: ["Dashboard", "Analytics"],
+      slug: "aiiac",
+      title: "AIIAC Limited",
+      category: { en: "Client · Consulting & IT support", es: "Cliente · Consultoría y soporte de TI" },
+      platforms: ["Web", "Software", "IT support"],
       problem: {
-        en: "Placeholder — describe the reporting problem here.",
-        es: "Ejemplo — describe aquí el problema de reportes.",
+        en: "A growing company that needed dependable technology and someone to call when something breaks.",
+        es: "Una empresa en crecimiento que necesitaba tecnología confiable y alguien a quien llamar cuando algo falla.",
       },
       built: {
-        en: "Placeholder — describe the dashboard, data sources and metrics here.",
-        es: "Ejemplo — describe aquí el dashboard, las fuentes de datos y las métricas.",
+        en: "Web, app and software work, business email setup, and IT support whenever it is needed.",
+        es: "Trabajo web, de apps y de software, configuración de correo empresarial y soporte de TI cuando se necesita.",
       },
       result: {
-        en: "Placeholder — add the measurable outcome here.",
-        es: "Ejemplo — agrega aquí el resultado medible.",
+        en: "An ongoing technology partner for the company.",
+        es: "Un aliado tecnológico continuo para la empresa.",
       },
-      placeholder: true,
     },
   ] satisfies CaseStudy[],
 };
@@ -353,18 +352,18 @@ export const ventures = {
       url: "https://easyfen.com",
     },
     {
-      name: "Syl Express",
+      name: "Sylkit",
       description: {
-        en: "A software studio led by Sylvanus, building business systems.",
-        es: "Un estudio de software dirigido por Sylvanus, que construye sistemas de negocio.",
+        en: "A startup selling ready-made and custom software, apps and websites to businesses.",
+        es: "Una startup que vende software, apps y sitios web, listos para usar o a medida, a empresas.",
       },
-      url: "",
+      url: "https://sylkit.com",
     },
     {
       name: "Sylprint",
       description: {
-        en: "Printing services for businesses and events.",
-        es: "Servicios de impresión para empresas y eventos.",
+        en: "Started in 2023. Now five printing centers across Venezuela, with thousands of dollars in profit.",
+        es: "Iniciada en 2023. Hoy cuenta con cinco centros de impresión en Venezuela y miles de dólares en ganancias.",
       },
       url: "",
     },
@@ -390,8 +389,8 @@ export const about = {
       es: "Soy Sylvanus Fannah, desarrollador full-stack y fundador de Sierra Leona, actualmente radicado en Sudamérica. Estudié Ingeniería en Electrónica y Telecomunicaciones en la Universidad de Njala, lo que me dio una mentalidad de sistemas: entender cómo se conecta cada parte y luego hacerla confiable.",
     },
     {
-      en: "I sharpened my software skills through the Orange Digital Center x Simplon web and mobile development program, then put them to work building my own companies — Easyfen, Syl Express, Sylprint and Talu.",
-      es: "Perfeccioné mis habilidades en el programa de desarrollo web y móvil de Orange Digital Center x Simplon, y luego las puse en práctica fundando mis propias empresas — Easyfen, Syl Express, Sylprint y Talu.",
+      en: "I sharpened my software skills through the Orange Digital Center x Simplon web and mobile development program, then put them to work building my own companies — Easyfen, Sylkit, Sylprint and Talu.",
+      es: "Perfeccioné mis habilidades en el programa de desarrollo web y móvil de Orange Digital Center x Simplon, y luego las puse en práctica fundando mis propias empresas — Easyfen, Sylkit, Sylprint y Talu.",
     },
     {
       en: "Today I help clients worldwide turn ideas and messy processes into software that works. You get clear communication, honest timelines and a developer who treats your project like his own business.",
@@ -409,7 +408,7 @@ export const about = {
     },
     {
       label: { en: "Founder", es: "Fundador" },
-      detail: { en: "Easyfen · Syl Express · Sylprint · Talu", es: "Easyfen · Syl Express · Sylprint · Talu" },
+      detail: { en: "Easyfen · Sylkit · Sylprint · Talu", es: "Easyfen · Sylkit · Sylprint · Talu" },
     },
   ],
   principles: [
@@ -469,18 +468,9 @@ export const contact = {
     en: "Tell me about your project. I reply to every request within one business day with next steps.",
     es: "Cuéntame sobre tu proyecto. Respondo cada solicitud en un día hábil con los próximos pasos.",
   },
-  /** Not displayed yet. Set `showEmail` to true once the mailbox is live. */
-  email: "sylvanus@sylvanusfannah.com",
-  showEmail: false,
-  whatsapp: {
-    display: "+1 (646) 934-8752",
-    number: "16469348752",
-    label: { en: "Chat on WhatsApp", es: "Escríbeme por WhatsApp" },
-    prefill: {
-      en: "Hi Sylvanus, I found your website and I'd like to talk about a project.",
-      es: "Hola Sylvanus, vi tu sitio web y me gustaría hablar sobre un proyecto.",
-    },
-  },
+  email: "sylvanus@sylkit.com",
+  showEmail: true,
+  emailLabel: { en: "Email me", es: "Escríbeme por correo" },
   linkedin: {
     url: "https://www.linkedin.com/in/sylvanus-fannah-b2a896216",
     label: { en: "Connect on LinkedIn", es: "Conectar en LinkedIn" },
@@ -514,8 +504,8 @@ export const contact = {
     },
     errors: {
       generic: {
-        en: "Something went wrong. Please try again, or message me on WhatsApp.",
-        es: "Algo salió mal. Inténtalo de nuevo o escríbeme por WhatsApp.",
+        en: "Something went wrong. Please try again, or email me directly.",
+        es: "Algo salió mal. Inténtalo de nuevo o escríbeme directamente por correo.",
       },
       validation: { en: "Please check the highlighted fields.", es: "Revisa los campos marcados." },
       rateLimit: {
@@ -527,8 +517,8 @@ export const contact = {
         es: "Completa la verificación e inténtalo de nuevo.",
       },
       unavailable: {
-        en: "The quote form isn't connected yet. Please reach me on WhatsApp or LinkedIn in the meantime.",
-        es: "El formulario aún no está conectado. Mientras tanto, contáctame por WhatsApp o LinkedIn.",
+        en: "The form isn't connected yet. Please email me or reach me on LinkedIn in the meantime.",
+        es: "El formulario aún no está conectado. Mientras tanto, escríbeme por correo o LinkedIn.",
       },
     },
     fieldErrors: {
