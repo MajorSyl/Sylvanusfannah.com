@@ -6,8 +6,14 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": ["/api/*", "/shots/*"]
   },
+  "kv_namespaces": [
+    {
+      "binding": "SHOTS",
+      "id": "d667851c36f44663b84db9fdf9b90568"
+    }
+  ],
   "d1_databases": [
     {
       "binding": "DB",

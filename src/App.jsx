@@ -18,18 +18,75 @@ const SPEC = [
   { k: "AI & automation", v: "LLM APIs · AI chatbots · Workflow automation" },
 ];
 
-const CLIENTS = [
+const PROJECTS = [
+  {
+    name: "Easyfen",
+    role: "Founder · Lead developer",
+    desc: "A real estate platform for Sierra Leone: real listings from Freetown to Bo, Kenema and Makeni, with buyers messaging agents directly. Web and mobile.",
+    url: "https://easyfen.com",
+    domain: "easyfen.com",
+    shot: "/shots/easyfen.jpg",
+  },
+  {
+    name: "Sylkit",
+    role: "Founder",
+    desc: "A marketplace where businesses buy ready-made or custom software: point of sale, inventory, websites, mobile apps and AI tools.",
+    url: "https://sylkit.com",
+    domain: "sylkit.com",
+    shot: "/shots/sylkit.jpg",
+  },
+  {
+    name: "AIIAC Group",
+    role: "Website · IT support",
+    desc: "The company website, plus ongoing IT support and business email setup for the team.",
+    url: "https://aiiacgroup.ltd",
+    domain: "aiiacgroup.ltd",
+    shot: "/shots/aiiac.jpg",
+  },
   {
     name: "Rotary Club of Freetown-Sunset",
-    desc: "The club's website and web app for its members.",
+    role: "Website · Web app",
+    desc: "The club's website and a web app for its members and projects.",
     url: "https://rcfsunset.org",
-    linkLabel: "rcfsunset.org",
-  },
-  {
-    name: "AIIAC Limited",
-    desc: "Web, app and software work, plus IT support when needed.",
+    domain: "rcfsunset.org",
+    shot: "/shots/rcfs.jpg",
   },
 ];
+
+function ProjectCard({ p }) {
+  const [imgOk, setImgOk] = useState(true);
+  return (
+    <a
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col overflow-hidden rounded-lg border border-[#1B2836] bg-[#0E1620] transition-colors hover:border-[#3E556B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C77A42]"
+    >
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-[#1B2836] bg-[#111c26]">
+        {imgOk ? (
+          <img
+            src={p.shot}
+            alt={`Screenshot of ${p.domain}`}
+            loading="lazy"
+            onError={() => setImgOk(false)}
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        ) : (
+          <div className="grid h-full place-items-center font-mono text-sm text-[#5F7488]">{p.domain}</div>
+        )}
+      </div>
+      <div className="flex flex-1 flex-col px-5 py-5">
+        <span className="font-mono text-[11px] tracking-[0.2em] text-[#C77A42] uppercase">{p.role}</span>
+        <h3 className="mt-2 text-lg font-bold text-[#E7EDF3]">{p.name}</h3>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-[#9FB0C1]">{p.desc}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#C77A42] group-hover:text-[#d68a52]">
+          {p.domain}
+          <ArrowUpRight size={14} />
+        </span>
+      </div>
+    </a>
+  );
+}
 
 function ContactForm() {
   const [status, setStatus] = useState({ kind: "", text: "" });
@@ -188,6 +245,25 @@ export default function App() {
         )}
       </header>
 
+      {/* ===== SELECTED WORK ===== */}
+      <section className="max-w-5xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
+        {shown && (
+          <div className="rise" style={{ animationDelay: "80ms" }}>
+            <Eyebrow>Selected work</Eyebrow>
+            <h2 className="mt-4 font-mono text-2xl md:text-3xl font-bold">Projects I&apos;ve built</h2>
+            <p className="mt-4 max-w-xl text-[#9FB0C1] leading-relaxed">
+              Live products for my own companies and for clients who hire me as a consultant on web
+              and mobile apps, business systems and software.
+            </p>
+          </div>
+        )}
+        <div className={`mt-8 grid gap-5 sm:grid-cols-2 ${shown ? "rise" : ""}`} style={{ animationDelay: "160ms" }}>
+          {PROJECTS.map((p) => (
+            <ProjectCard key={p.name} p={p} />
+          ))}
+        </div>
+      </section>
+
       {/* ===== VENTURES SHOWCASE (glassmorphic) ===== */}
       <section className="max-w-5xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
         {shown && (
@@ -199,51 +275,6 @@ export default function App() {
         <div style={{ minHeight: 560 }}>
           <VentureShowcase />
         </div>
-      </section>
-
-      {/* ===== CONSULTING & CLIENTS ===== */}
-      <section className="max-w-5xl mx-auto px-6 md:px-10 py-10 md:py-14">
-        {shown && (
-          <div className="rise" style={{ animationDelay: "80ms" }}>
-            <Eyebrow>Consulting</Eyebrow>
-            <h2 className="mt-4 font-mono text-2xl md:text-3xl font-bold">Work with me</h2>
-            <p className="mt-4 max-w-xl text-[#9FB0C1] leading-relaxed">
-              I consult on and build web and mobile apps, business systems and software — from the
-              first plan to a live product, with support after launch.
-            </p>
-          </div>
-        )}
-
-        <div className={`mt-8 rounded-lg border border-[#1B2836] overflow-hidden ${shown ? "rise" : ""}`} style={{ animationDelay: "200ms" }}>
-          {CLIENTS.map((c, i) => (
-            <div
-              key={c.name}
-              className={`grid grid-cols-1 sm:grid-cols-[260px_1fr] gap-1 sm:gap-4 px-5 py-4 ${
-                i % 2 === 1 ? "bg-[#0E1620]" : ""
-              } ${i !== CLIENTS.length - 1 ? "border-b border-[#1B2836]" : ""}`}
-            >
-              <span className="text-sm font-semibold text-[#E7EDF3]">{c.name}</span>
-              <span className="text-sm text-[#C9D5E0] leading-relaxed">
-                {c.desc}
-                {c.url && (
-                  <>
-                    {" "}
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-0.5 text-[#C77A42] hover:text-[#d68a52]"
-                    >
-                      {c.linkLabel}
-                      <ArrowUpRight size={13} />
-                    </a>
-                  </>
-                )}
-              </span>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-xs text-[#5F7488]">Selected clients.</p>
       </section>
 
       {/* ===== SPEC SHEET ===== */}

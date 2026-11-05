@@ -62,9 +62,27 @@ async function handleContact(request, env) {
   return json({ ok: true });
 }
 
+// Project screenshots live in the SHOTS KV namespace (captured with Cloudflare Browser Rendering).
+const SHOT_KEYS = new Set(["easyfen.jpg", "sylkit.jpg", "aiiac.jpg", "rcfs.jpg"]);
+
+async function handleShot(pathname, env) {
+  const key = pathname.slice("/shots/".length);
+  if (!SHOT_KEYS.has(key)) return new Response("Not found", { status: 404 });
+  const body = await env.SHOTS.get(key, "arrayBuffer");
+  if (!body) return new Response("Not found", { status: 404 });
+  return new Response(body, {
+    headers: {
+      "content-type": "image/jpeg",
+      "cache-control": "public, max-age=86400",
+      "x-content-type-options": "nosniff",
+    },
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith("/shots/")) return handleShot(url.pathname, env);
     if (url.pathname === "/api/contact") {
       try {
         return await handleContact(request, env);
