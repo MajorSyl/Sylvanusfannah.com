@@ -434,7 +434,12 @@ export const skills = {
   heading: { en: "The toolkit", es: "Las herramientas" },
   stackLabel: { en: "Core stack", es: "Stack principal" },
   certsLabel: { en: "Certifications", es: "Certificaciones" },
-  stack: ["React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB", "Supabase", "Firebase", "Tailwind"],
+  stackGroups: [
+    { label: { en: "Frontend & mobile", es: "Frontend y móvil" }, items: ["React", "Next.js", "React Native", "Expo", "Tailwind CSS"] },
+    { label: { en: "Backend & languages", es: "Backend y lenguajes" }, items: ["TypeScript", "JavaScript", "Node.js", "Express.js", "Python"] },
+    { label: { en: "Data", es: "Datos" }, items: ["PostgreSQL", "MongoDB", "Supabase", "Firebase"] },
+    { label: { en: "Cloud & DevOps", es: "Nube y DevOps" }, items: ["AWS", "Google Cloud", "Cloudflare", "Vercel", "Git"] },
+  ] as { label: { en: string; es: string }; items: string[] }[],
   certifications: [
     { title: { en: "Google Cloud Infrastructure", es: "Google Cloud Infrastructure" }, issuer: "Google Cloud", year: "2025" },
     { title: { en: "Web & Mobile Development", es: "Desarrollo Web y Móvil" }, issuer: "Orange Digital Center x Simplon", year: "2022" },

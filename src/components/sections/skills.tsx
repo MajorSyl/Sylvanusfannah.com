@@ -11,13 +11,20 @@ export function Skills({ locale }: { locale: Locale }) {
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           <Reveal className="glass p-7 sm:p-8">
             <h3 className="text-xs font-semibold tracking-[0.14em] text-muted uppercase">{skills.stackLabel[locale]}</h3>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {skills.stack.map((s) => (
-                <li key={s} className="rounded-full border border-line bg-white/80 px-3.5 py-1.5 text-sm font-medium text-ink">
-                  {s}
-                </li>
+            <div className="mt-5 space-y-5">
+              {skills.stackGroups.map((g) => (
+                <div key={g.label.en}>
+                  <p className="text-sm font-semibold text-ink-soft">{g.label[locale]}</p>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {g.items.map((s) => (
+                      <li key={s} className="rounded-full border border-line bg-white/80 px-3.5 py-1.5 text-sm font-medium text-ink">
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </Reveal>
           <Reveal delay={0.08} className="glass p-7 sm:p-8">
             <h3 className="text-xs font-semibold tracking-[0.14em] text-muted uppercase">{skills.certsLabel[locale]}</h3>
