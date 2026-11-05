@@ -1,8 +1,18 @@
 {
   "name": "sylvanusfannah-com",
+  "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sylvanus-site-messages",
+      "database_id": "9b9f498c-0781-47fd-8892-6a65e155ff7f"
+    }
+  ]
 }

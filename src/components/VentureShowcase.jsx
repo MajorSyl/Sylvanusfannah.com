@@ -12,14 +12,14 @@ const VENTURES = [
   },
   {
     tag: "Venture 02",
-    title: "Syl Express",
-    desc: "A web and mobile app development studio, shipping client software on an annual build-and-support cycle.",
+    title: "Sylkit",
+    desc: "A startup selling ready-made and custom software, apps and websites to businesses, at sylkit.com.",
     offset: "md:ml-12",
   },
   {
     tag: "Venture 03",
     title: "Sylprint",
-    desc: "DTF & sublimation printing — apparel, merch, ID cards, and document and academic printing.",
+    desc: "Started in 2023. Now five printing centers across Venezuela — DTF and sublimation printing, merch, ID cards and documents — with thousands of dollars in profit.",
     offset: "",
   },
 ];
