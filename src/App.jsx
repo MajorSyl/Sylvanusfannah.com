@@ -12,9 +12,10 @@ const SPEC = [
   { k: "Certifications", v: "Google Cloud Infrastructure (2025) · Web & Mobile Dev, Orange Digital Center × Simplon.co (2022) · Digital Marketing, Bluecrest (2021)" },
   { k: "Languages", v: "English, Spanish" },
   { k: "Frontend", v: "React · Next.js · React Native (Expo) · Tailwind CSS" },
-  { k: "Backend", v: "TypeScript · JavaScript · Node.js · Express · Python" },
-  { k: "Data", v: "PostgreSQL · MongoDB · Supabase · Firebase" },
-  { k: "Cloud & DevOps", v: "AWS · Google Cloud · Cloudflare · Vercel · Git" },
+  { k: "Backend", v: "TypeScript · JavaScript · Node.js · Express · Python · REST APIs" },
+  { k: "Data", v: "SQL · PostgreSQL · MongoDB · Supabase · Firebase" },
+  { k: "Cloud & DevOps", v: "AWS · Google Cloud · Cloudflare · Vercel · Docker · GitHub Actions (CI/CD) · Git" },
+  { k: "AI & automation", v: "LLM APIs · AI chatbots · Workflow automation" },
 ];
 
 function useIn() {
