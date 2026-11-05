@@ -11,7 +11,10 @@ const SPEC = [
   { k: "Education", v: "B.Eng. Electronics & Telecommunication — Njala University, 2022" },
   { k: "Certifications", v: "Google Cloud Infrastructure (2025) · Web & Mobile Dev, Orange Digital Center × Simplon.co (2022) · Digital Marketing, Bluecrest (2021)" },
   { k: "Languages", v: "English, Spanish" },
-  { k: "Stack", v: "React · Next.js · TypeScript · Node.js · Express · Python · PostgreSQL · MongoDB · Supabase · Firebase · Tailwind CSS" },
+  { k: "Frontend", v: "React · Next.js · React Native (Expo) · Tailwind CSS" },
+  { k: "Backend", v: "TypeScript · JavaScript · Node.js · Express · Python" },
+  { k: "Data", v: "PostgreSQL · MongoDB · Supabase · Firebase" },
+  { k: "Cloud & DevOps", v: "AWS · Google Cloud · Cloudflare · Vercel · Git" },
 ];
 
 function useIn() {
